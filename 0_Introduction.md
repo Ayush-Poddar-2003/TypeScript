@@ -1,4 +1,4 @@
-# Intro
+# Introduction to Ts
 
 Js had no type safety, a loosely typed language.
 
@@ -8,43 +8,33 @@ a = "Ayush"
 ```
 
 TypeScript is JavaScript with added syntax for types.  
-It uses compile time type checking.
+
+---
+Browser only runs Js  
+Js --> Compiler --> Ts
 
 ---
 
+It uses compile time type checking.
 TypeScript has an official compiler  
 
     npm install -g typescript
 
     tsc fileName.ts  
-    //To compile, we can write solely tsc too
+    //To compile, it will convert into .js
 
-    tsc --watch
-    //no need to compile everytime
 
 ---
-You will need ts.config file too
-
+You will need `ts.config` file too  
+Consists rules like, if variable left unused etc.
 
     tsc --init
     //If didn't work
 
     npx tsc --init
 
+---
+To avoid compiling everytime after making changes  
+    
+    tsc --watch
 
-# TYPES -
-
-The most basic types in TypeScript are called primitives.
-
-```ts
-let isActive: boolean = true;
-
-let decimal: number = 6;
-let hex: number = 0xf00d;       // Hexadecimal
-let binary: number = 0b1010;     // Binary
-let octal: number = 0o744;      // Octal
-let float: number = 3.14;      // Floating point
-
-let color: string = "blue";
-let fullName: string = 'John Doe';
-```
