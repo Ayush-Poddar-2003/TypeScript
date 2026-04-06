@@ -7,41 +7,51 @@ let a = 12;
 let b = a;
 b += 2;
 console.log(a + " " + b); // 12 14
+// a remain unchanged
 ```
-But in arrays, changes made in `b` affected `a`
-```js
-let a = [1, 2, 3, 4, 5];
-let b = a;
-b.pop();
-console.log(a + " " + b); //1234 1234
-```
-These are references : [ ] , { } , ( )
-
-
+---
 ## <center> Primitives
 The most basic types in TypeScript are called primitives.
 ```ts
+// BOOLEAN
 let isActive = true;
 
+// NUMBER
 let decimal = 6;
 let hex = 0xf00d;
 let binary = 0b1010;
 let octal = 0o744;      
 let float = 3.14;      
 
+//STRING
 let color = "blue";
 let fullName = 'John Doe';
+
+// BIGINT : Whole numbers larger than 2^53 - 1.
+const hugeNumber = BigInt(9007199254740991);
+
+// SYMBOL : creates unique identifiers
+
+
 ```
 
 
-## <center> References [] {} ()
+## <center> References [ ] { } ( )
+
+In **Refrences**, If changes made in `b` => will affect `a`
+```js
+let a = [1, 2, 3, 4, 5];
+let b = a;
+b.pop();
+console.log(a + " " + b); //1234 1234
+```
 
 #### 1. ARRAYS :-
 ```JS
-let a = [1,2,3,4,5, "AYUSH"];
+let a = [1,2,3,4,5, "AYUSH"]; 
+//If hover will show a:(number|string)[]
 
 let numbers: number[] = [1, 2, 3];
-
 let names: Array<string> = ["A", "B"];
 ```
 
@@ -53,24 +63,25 @@ let tup:[string, number] = ["Ayush", 69]
 #### 3. ENUM :-
 ```ts
 enum UserRoles {
-    ADMIN = "admin",
-    GUEST = "guest",
-    SUPER_ADMIN = "super_admin"
+    ADMIN = "aditi",
+    GUEST = "ayush",
+    SUPER_ADMIN = "daddy"
 }
 ```
 ![alt text](image.png)  
-we dont have to remember any property
 
+## <CENTER>MORE TYPES
 
----
-#### 4. ANY :-  
-Turns off TypeScript safety
+### ANY :-
+Turns off TypeScript safety,  
+![alt text](image-2.png)   
+
 ```ts
 let value: any = 10;
 value = "hello"; // allowed (no safety)
 ```
 ---
-#### 5. UNKNOWN :-  
+### UNKNOWN :-  
 Forces you to check type before using it
 ```ts
 let value: unknown = 10;
@@ -81,10 +92,13 @@ if (typeof value === "string") {
 ```
 
 ---
-FUNCTIONS :-
+### FUNCTIONS :-
 
 ```ts
 function add(a: number, b: number): number {
   return a + b;
 }
 ```
+
+---
+### NULL :-

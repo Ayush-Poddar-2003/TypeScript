@@ -1,40 +1,36 @@
-# Introduction to Ts
+# <center>Introduction
 
 Js had no type safety, a loosely typed language.
 
 ```js
-var a = 69
+let a:number = 69
 a = "Ayush"
 ```
 
-TypeScript is JavaScript with added syntax for types.  
-
----
-Browser only runs Js  
-Js --> Compiler --> Ts
+TypeScript is better version of js with added syntax for types.  
 
 ---
 
-It uses compile time type checking.
-TypeScript has an official compiler  
+### Ts Compiler Installation -
 
     npm install -g typescript
 
-    tsc fileName.ts  
-    //To compile, it will convert into .js
+To Compile :-
+
+    tsc fileName.ts  // it will create a .js
 
 
----
-You will need `ts.config` file too  
-Consists rules like, if variable left unused etc.
+### Project Setup -
 
-    tsc --init
-    //If didn't work
+You will need `ts.config` file, Settings file  
+Consists rules like, if variable left unused, undefined   etc.
 
-    npx tsc --init
+    tsc --init //to create ts.config
+
+    npx tsc --init //if above didn't work
 
 ---
 To avoid compiling everytime after making changes  
     
-    tsc --watch
+    tsc --watch 
 
